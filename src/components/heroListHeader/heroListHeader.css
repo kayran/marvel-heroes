@@ -1,0 +1,27 @@
+.hero-list__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.hero-list__header__count {
+    color: var(--light-gray);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hero-list__header__actions {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero-list__header__actions__sort, .hero-list__header__actions__favorite{
+    cursor: pointer;
+    color: var(--font-red);
+    font-weight: bold;
+}
+.hero-list__header__actions__sort svg, .hero-list__header__actions__favorite svg {
+    margin-right: 10px;
+}
