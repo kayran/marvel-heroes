@@ -1,5 +1,29 @@
 .search {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+    background-color: var(--search-red);
+    border-radius: 50px;
+    padding-left: 20px;    
+    width: 60%;
+}
+
+.search svg {
+    margin-right: 20px;
+}
+
+.search input{
+    background-color: transparent;
+    border-width: 0 ;
+    padding: 15px;
+    font-size: 18px;
+    color: var(--icon-red);
+    font-weight: bold;
+    width: 90%;
+    
+}
+
+.search input::placeholder{
+    color: var(--font-red);
+    font-weight: bold;
 }

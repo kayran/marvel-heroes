@@ -41,19 +41,27 @@ class App extends Component {
   }
 
   searchHero = async (searchText) => {
+      if(this.state.fetchingHero){
+        return false;
+      }
       await this.setState({fetchingHero:true, searchText, heroList:[]});
       const heroList = await this.getHeroBasedOnState()
       this.setState({heroList, fetchingHero:false});
   }
 
   changeSort = async (sort) => {
+    if(this.state.fetchingHero){
+      return false;
+    }
     await this.setState({fetchingHero:true, sort, heroList:[]});
     const heroList = await this.getHeroBasedOnState()
     this.setState({heroList, fetchingHero:false});
   }
 
   changeFavorites = async () => {
-    console.log(this.state.onlyFavorite);
+    if(this.state.fetchingHero){
+      return false;
+    }
     await this.setState({
       fetchingHero:true, 
       onlyFavorite:!this.state.onlyFavorite, 
