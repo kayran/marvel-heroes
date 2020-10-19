@@ -3,7 +3,7 @@ import md5 from 'md5'
 const PVTK = '7099f2e0ed5dbee8018aa20a3af9a6e52821c440';
 const PUBLIC_KEY = 'c0cb32ba54b8ef3b86528ef75b0218fb';
 
-const BASE_URL = 'http://gateway.marvel.com/v1/public';
+const BASE_URL = 'https://gateway.marvel.com/v1/public';
 
 const getTs = () => new Date().getTime();
 

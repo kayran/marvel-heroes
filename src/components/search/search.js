@@ -18,7 +18,7 @@ export default function Search({onSearch}) {
 
     return (
         <section className='search'>
-            <svg onClick={handleClick}>
+            <svg>
                 <use href='#search'></use>
             </svg>
             <input 

@@ -1,23 +1,24 @@
-runtime: nodejs10
-threadsafe: true
+runtime: nodejs12
+
+service: marvel-heroes
 
 instance_class: F1
 
+automatic_scaling:
+  max_concurrent_requests: 20
+  min_idle_instances: 0
+  max_pending_latency: 300ms
+
+default_expiration: "1s" #365d
+
 handlers:
-- url: /
-  static_files: index.html
-  upload: index.html
-  expiration: "1s"
+# Serve all static files with url ending with a file extension
+- url: /(.*\..+)$
+  static_files: build/\1
+  upload: build/(.*\..+)$
   secure: always
-
-- url: /(.*\.(css|js|map|bmp|gif|jpeg|jpg|png|ico|svg|woff|woff2|ttf))$
-  static_files: static/\1
-  upload: .*\.(css|js|map|bmp|gif|jpeg|jpg|png|ico|svg|woff|woff2|ttf)$
-  expiration: "1s"
-  secure: always
-
+# Catch all handler to index.html
 - url: /.*
-  static_files: index.html
-  upload: index.html
-  expiration: "1s"
+  static_files: build/index.html
+  upload: build/index.html
   secure: always
