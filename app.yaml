@@ -1,0 +1,23 @@
+runtime: nodejs10
+threadsafe: true
+
+instance_class: F1
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+  expiration: "1s"
+  secure: always
+
+- url: /(.*\.(css|js|map|bmp|gif|jpeg|jpg|png|ico|svg|woff|woff2|ttf))$
+  static_files: static/\1
+  upload: .*\.(css|js|map|bmp|gif|jpeg|jpg|png|ico|svg|woff|woff2|ttf)$
+  expiration: "1s"
+  secure: always
+
+- url: /.*
+  static_files: index.html
+  upload: index.html
+  expiration: "1s"
+  secure: always

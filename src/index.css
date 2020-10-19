@@ -1,10 +1,10 @@
 :root {
   --gray: #404040;
   --mid-gray: #8c8c8c;
-  --light-gray: #bababa;
-  --icon-red: #ff0000;
+  --light-gray: #b9b9b9;
+  --icon-red: #ff1510;
   --footer-red: #ff1510;
-  --border-red: #e92429;
+  --border-red: #ff1510;
   --font-red: #fa7c7c;  
   --search-red: #fdecec;
 }
