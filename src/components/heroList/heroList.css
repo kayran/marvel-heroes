@@ -1,0 +1,13 @@
+.hero-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: center;
+    width: 90%;
+    margin: 50px auto;
+}
+
+.hero-list--messaging{
+    justify-content: center;
+}
