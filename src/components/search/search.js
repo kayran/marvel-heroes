@@ -12,10 +12,6 @@ export default function Search({onSearch}) {
         }
     }
 
-    const handleClick = ({target: {value}}) => {
-        onSearch(value);
-    }
-
     return (
         <section className='search'>
             <svg>

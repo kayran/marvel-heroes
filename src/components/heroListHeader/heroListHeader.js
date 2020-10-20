@@ -27,7 +27,7 @@ export default function HeroListHeader({
                 onClick={onChangeFavorites}
                 >
                    <svg>
-                       <use href='#heart-fullfilled'/>
+                       <use href={`#heart-${onlyFavorites?'fullfilled':'empty'}`}/>
                     </svg> 
                     Somente Favoritos
                 </span>

@@ -89,15 +89,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header onSearch={searchText=>this.searchHero(searchText)}/>
+        <Header 
+          onSearch={searchText=>this.searchHero(searchText)}
+          heroListCount={this.state.heroList.length}
+          sort={this.state.sort}
+          onlyFavorites={this.state.onlyFavorite}
+          changeSort={sort => this.changeSort(sort)}
+          changeFavorites={() => this.changeFavorites()}
+  
+        />
         
         <HeroList 
           heroList={this.state.heroList} 
-          sort={this.state.sort}
+          
           favorites={this.state.favorites}
           fetchingHero={this.state.fetchingHero}
-          changeSort={sort => this.changeSort(sort)}
-          changeFavorites={() => this.changeFavorites()}
           addFavorite={id => this.addFavorite(id)}
           removeFavorite={id => this.removeFavorite(id)}
         />

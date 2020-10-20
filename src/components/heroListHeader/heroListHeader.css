@@ -1,8 +1,9 @@
 .hero-list__header{
-    width: 100%;
+    width: 88%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    margin: 30px auto 10px;
 }
 
 .hero-list__header__count {
